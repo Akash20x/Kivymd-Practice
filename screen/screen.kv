@@ -1,0 +1,63 @@
+
+
+ScreenManager:
+    MenuScreen:
+    ProfileScreen:
+    UploadScreen:
+
+
+<MenuScreen>:
+    name: 'menu'
+    ScrollView:
+    	MDGridLayout:
+    		size:root.width,root.height
+    		cols:3
+    		adaptive_height:True
+    		padding:dp(15),dp(60)
+    		spacing:dp(50)
+		    MDRaisedButton:
+		    	text:"Click Me"
+		    	font_size: "50sp"
+		    	on_release:
+		    		root.show_themepicker()
+		    MDRectangleFlatButton:
+		        text: 'Profile'
+		        #pos_hint: {'center_x':0.5,'center_y':0.6}
+		        on_press: root.manager.current = 'profile'
+		    MDRectangleFlatButton:
+		        text: 'Upload'
+		        #pos_hint: {'center_x':0.5,'center_y':0.5}
+		        on_press: root.manager.current = 'upload'
+    
+<ProfileScreen>:
+    name: 'profile'
+	FloatLayout:
+		size:root.width,root.height
+
+		MDLabel:
+		    text: 'Profile'
+		    halign: 'center'
+		    pos_hint: {"x":0.35,"y":0.35}
+		MDRectangleFlatButton:
+		    text: 'Back'
+		    pos_hint:{"x":0.9,"bottom":1}
+		    on_press: root.manager.current = 'menu'
+		MDRectangleFlatButton:
+		    text: 'Upload'
+		    pos_hint:{"x":0}
+		    on_press: root.manager.current = 'upload'
+        
+<UploadScreen>:
+    name: 'upload'
+    BoxLayout:
+    	orientation:"horizontal"
+    	spacing:10
+    	padding:50
+		MDLabel:
+		    text: 'Upload'
+		    #halign: 'center'
+		MDRectangleFlatButton:
+		    text: 'Back'
+		    #pos_hint: {'center_x':0.5,'center_y':0.1}
+		    on_press: root.manager.current = 'menu'
+		    
