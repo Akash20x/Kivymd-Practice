@@ -1,0 +1,70 @@
+pip install https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.8.0-py3-none-any.whl
+
+
+python -m pip install --upgrade https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.12.0-py3-none-any.whl
+
+python -m virtualenv env
+
+
+
+
+Traceback (most recent call last):
+  File "D:\mydesktop\hackathon\WNS-hackathon-2019-master\env\lib\site-packages\tensorflow\python\pywrap_tensorflow_internal.py", line 18, in swig_import_helper
+    fp, pathname, description = imp.find_module('_pywrap_tensorflow_internal', [dirname(__file__)])
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python39\lib\imp.py", line 296, in find_module
+    raise ImportError(_ERR_MSG.format(name), name=name)
+ImportError: No module named '_pywrap_tensorflow_internal'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\mydesktop\hackathon\WNS-hackathon-2019-master\env\lib\site-packages\tensorflow\python\pywrap_tensorflow.py", line 58, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "D:\mydesktop\hackathon\WNS-hackathon-2019-master\env\lib\site-packages\tensorflow\python\pywrap_tensorflow_internal.py", line 28, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "D:\mydesktop\hackathon\WNS-hackathon-2019-master\env\lib\site-packages\tensorflow\python\pywrap_tensorflow_internal.py", line 20, in swig_import_helper
+    import _pywrap_tensorflow_internal
+ModuleNotFoundError: No module named '_pywrap_tensorflow_internal'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\mydesktop\hackathon\WNS-hackathon-2019-master\env\a.py", line 1, in <module>
+    import tensorflow as tf
+  File "D:\mydesktop\hackathon\WNS-hackathon-2019-master\env\lib\site-packages\tensorflow\__init__.py", line 24, in <module>
+    from tensorflow.python import pywrap_tensorflow  # pylint: disable=unused-import
+  File "D:\mydesktop\hackathon\WNS-hackathon-2019-master\env\lib\site-packages\tensorflow\python\__init__.py", line 49, in <module>
+    from tensorflow.python import pywrap_tensorflow
+  File "D:\mydesktop\hackathon\WNS-hackathon-2019-master\env\lib\site-packages\tensorflow\python\pywrap_tensorflow.py", line 74, in <module>
+    raise ImportError(msg)
+ImportError: Traceback (most recent call last):
+  File "D:\mydesktop\hackathon\WNS-hackathon-2019-master\env\lib\site-packages\tensorflow\python\pywrap_tensorflow_internal.py", line 18, in swig_import_helper
+    fp, pathname, description = imp.find_module('_pywrap_tensorflow_internal', [dirname(__file__)])
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python39\lib\imp.py", line 296, in find_module
+    raise ImportError(_ERR_MSG.format(name), name=name)
+ImportError: No module named '_pywrap_tensorflow_internal'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\mydesktop\hackathon\WNS-hackathon-2019-master\env\lib\site-packages\tensorflow\python\pywrap_tensorflow.py", line 58, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "D:\mydesktop\hackathon\WNS-hackathon-2019-master\env\lib\site-packages\tensorflow\python\pywrap_tensorflow_internal.py", line 28, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "D:\mydesktop\hackathon\WNS-hackathon-2019-master\env\lib\site-packages\tensorflow\python\pywrap_tensorflow_internal.py", line 20, in swig_import_helper
+    import _pywrap_tensorflow_internal
+ModuleNotFoundError: No module named '_pywrap_tensorflow_internal'
+
+
+Failed to load the native TensorFlow runtime.
+
+See https://www.tensorflow.org/install/install_sources#common_installation_problems
+
+for some common reasons and solutions.  Include the entire stack trace
+above this error message when asking for help.
+
+
+
+
+
+
