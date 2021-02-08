@@ -1,0 +1,110 @@
+<StarButton@MDIconButton>
+    icon: "star"
+    on_release: self.icon = "star-outline" if self.icon == "star" else "star"
+
+<SwipeToDeleteItem>:
+    size_hint_y: None
+    height: content.height
+    type_swipe: "auto"
+    on_swipe_complete: app.on_swipe_complete(root)
+
+    MDCardSwipeLayerBox:
+        # Content under the card.
+
+    MDCardSwipeFrontBox:
+
+        # Content of card.
+        OneLineListItem:
+            id: content
+            text: root.text
+            _no_ripple_effect: True
+
+
+Screen:
+    MDCard:
+        ripple_behavior: True
+        focus_behavior: True
+        focus_color: rgba(210,210,210,255)
+        border_radius: dp(20)
+        radius: [dp(10)]
+        background: 'background.png'
+        orientation: "vertical"
+        padding: "8dp"
+        size_hint: None, None
+        elevation:6
+        size: "350dp", "350dp"
+        pos_hint: {"center_x": .25, "center_y": .70}
+        BoxLayout:
+            orientation: "vertical"
+            spacing: "10dp"
+
+            MDToolbar:
+                elevation: 10
+                title: "MDCardSwipe"
+
+            ScrollView:
+                scroll_timeout : 100
+
+                MDList:
+                    id: md_list
+                    padding: 0
+
+   
+    MDCard:
+        orientation: "vertical"
+        size_hint: .5, None
+        height: box_top.height + box_bottom.height
+        focus_behavior: True
+        ripple_behavior: True
+        pos_hint: {"center_x": .5, "center_y": .2}
+
+        MDBoxLayout:
+            id: box_top
+            spacing: "20dp"
+            adaptive_height: True
+
+            FitImage:
+                source: "icon.png"
+                size_hint: .3, None
+                height: text_box.height
+
+            MDBoxLayout:
+                id: text_box
+                orientation: "vertical"
+                adaptive_height: True
+                spacing: "10dp"
+                padding: 0, "10dp", "10dp", "10dp"
+
+                MDLabel:
+                    text: "Ride the Lightning"
+                    theme_text_color: "Primary"
+                    font_style: "H5"
+                    bold: True
+                    size_hint_y: None
+                    height: self.texture_size[1]
+
+                MDLabel:
+                    text: "July 27, 1984"
+                    size_hint_y: None
+                    height: self.texture_size[1]
+                    theme_text_color: "Primary"
+
+        MDSeparator:
+
+        MDBoxLayout:
+            id: box_bottom
+            adaptive_height: True
+            padding: "10dp", 0, 0, 0
+
+            MDLabel:
+                text: "Rate this album"
+                size_hint_y: None
+                height: self.texture_size[1]
+                pos_hint: {"center_y": .5}
+                theme_text_color: "Primary"
+
+            StarButton:
+            StarButton:
+            StarButton:
+            StarButton:
+            StarButton:
