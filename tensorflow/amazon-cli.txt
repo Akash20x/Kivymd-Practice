@@ -1,8 +1,8 @@
 Access key ID
-AKIAQVDSUYNOX2GRM2C3
+AKIAQ............GRM2C3
 
 Secret access key
-E+FzQq6q36jlBHVGkRdn7rB/Gc6mw3KE4gMpC4MN
+E+F..q6q36jl......n7rB/Gc6.........4MN
 
 aws --version 
 
