@@ -1,0 +1,13 @@
+Access key ID
+AKIAQVDSUYNOX2GRM2C3
+
+Secret access key
+E+FzQq6q36jlBHVGkRdn7rB/Gc6mw3KE4gMpC4MN
+
+aws --version 
+
+aws config 
+
+download AWSCLI64PY3.msi
+
+python textractor.py --documents sentence.jpg --text
