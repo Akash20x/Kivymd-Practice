@@ -1,8 +1,4 @@
-Access key ID
-AKIAQ............GRM2C3
-
-Secret access key
-E+F..q6q36jl......n7rB/Gc6.........4MN
+Testing 
 
 aws --version 
 
